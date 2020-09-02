@@ -3,7 +3,7 @@ import MyPlugin from '../src'
 
 BScroll.use(MyPlugin)
 
-const bs = new BScroll('.wrapper', {
+let bs = new BScroll('.wrapper', {
   myPlugin: {
     scrollText: 'I am scrolling',
     scrollEndText: 'Scroll has ended'
