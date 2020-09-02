@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <title>插件教程</title>
+  <style>
+    body, html {
+      max-width: 400px;
+    }
+    .wrapper {
+      margin: 30px auto;
+      height: 300px;
+      width: 300px;
+      overflow: hidden;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+    .item {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .item:nth-child(2n) {
+      background-color: #fab1a0;
+    }
+    .item:nth-child(2n+ 1) {
+      background-color: #fdcb6e;
+    }
+    .blackboard-title {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .blackboard-content {
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+    </div>
+  </div>
+
+  <div class="blackboard">
+    <div class="blackboard-title">打印区</div>
+    <div class="blackboard-content"></div>
+  </div>
+</body>
+</html>

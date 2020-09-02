@@ -1,0 +1,23 @@
+{
+  "name": "plugin-tutorial",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "git@github.com:better-scroll/plugin-tutorial.git",
+  "author": "jizhi <jizhi@didichuxing.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@better-scroll/core": "^2.0.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config ./examples/webpack.dev.conf.js --host 0.0.0.0 --port 8932 --colors",
+    "build": "webpack --config ./examples/webpack.pro.conf.js"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
