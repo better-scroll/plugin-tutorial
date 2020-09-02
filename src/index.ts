@@ -1,9 +1,9 @@
 import BScroll from '@better-scroll/core'
 import { extend } from '@better-scroll/shared-utils'
 
-export type myPluginOptions = Partial<myPluginConfig> | true
+export type MyPluginOptions = Partial<MyPluginConfig> | true
 
-type myPluginConfig = {
+type MyPluginConfig = {
   scrollText: string,
   scrollEndText: string
 }
@@ -14,17 +14,17 @@ interface PluginAPI {
 
 declare module '@better-scroll/core' {
   interface CustomOptions {
-    myPluginOptions?: myPluginOptions
+    myPlugin?: MyPluginOptions
   }
 
   interface CustomAPI {
-    myPluginOptions: PluginAPI
+    myPlugin: PluginAPI
   }
 }
 
 export default class MyPlugin implements PluginAPI {
-  static pluginName = 'myPluginOptions'
-  public options: myPluginConfig
+  static pluginName = 'myPlugin'
+  public options: MyPluginConfig
   constructor(public scroll: BScroll){
     this.handleOptions()
 
@@ -34,10 +34,10 @@ export default class MyPlugin implements PluginAPI {
   }
 
   private handleOptions() {
-    const userOptions = (this.scroll.options.myPluginOptions === true
+    const userOptions = (this.scroll.options.myPlugin === true
       ? {}
-      : this.scroll.options.myPluginOptions) as Partial<myPluginConfig>
-    const defaultOptions: myPluginConfig = {
+      : this.scroll.options.myPlugin) as Partial<MyPluginConfig>
+    const defaultOptions: MyPluginConfig = {
       scrollText: 'I am scrolling',
       scrollEndText: 'Scroll has ended'
     }
@@ -48,7 +48,7 @@ export default class MyPlugin implements PluginAPI {
     const propertiesConfig = [
       {
         key: 'printScrollText',
-        sourceKey: 'plugins.myPluginOptions.printScrollText'
+        sourceKey: 'plugins.myPlugin.printScrollText'
       }
     ]
     // 将 myPlugin.printScrollText 代理至 bs.printScrollText

@@ -4,12 +4,12 @@ import MyPlugin from '../src'
 BScroll.use(MyPlugin)
 
 const bs = new BScroll('.wrapper', {
-  myPluginOptions: {
+  myPlugin: {
     scrollText: 'I am scrolling',
     scrollEndText: 'Scroll has ended'
   },
   // 或者
-  // myPluginOptions: true
+  // myPlugin: true
 })
 
 // 使用插件暴露到 bs 的事件
